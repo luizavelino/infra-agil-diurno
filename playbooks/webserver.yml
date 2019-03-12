@@ -1,0 +1,14 @@
+- name: Provisionando um servidor web
+  hosts: minion
+  become: yes
+  tasks:
+  - file: 
+      path: /tmp/site
+      state: directory    
+  - unarchive:         
+      src: /root/playbooks/files/site.tar.gz
+      dest: /tmp/site
+  - service:
+      name: apache2
+      state: started      
+      enabled: yes

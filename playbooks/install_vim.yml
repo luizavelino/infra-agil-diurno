@@ -1,0 +1,15 @@
+---
+- name: Servidor Web
+  hosts: minion
+  become: True
+  tasks:
+  - package:       
+       name: apache2 
+       state: present
+   - file: 
+       path: /var/www/html/infra-agil
+       state: directory
+   - unarchive:
+       src: /root/playbooks/files/site.tar.gz
+       dest: /var/www/html/infra-agil
+

@@ -1,0 +1,13 @@
+---
+- name: Verificando um valor estranho
+  hosts: all
+  tasks: 
+  - name: Verificando o Centos/Opensuse
+    shell: 'echo {{ansible_distribution}} $USER'
+    register: output
+  - name: Inspecionando a variavel
+    debug: 
+      msg: 'A saida foi {{output.stdout}}' 
+    #- name: Verifiando o Debian 
+    #shell: 'echo {{ansible_distribution}}'
+

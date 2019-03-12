@@ -1,0 +1,8 @@
+- yum:
+    update_cache: yes
+    name: '{{item}}'
+    state: present
+  become: yes  
+  with_items:
+  - nmap
+  - net-tools
