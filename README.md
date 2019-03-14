@@ -19,3 +19,12 @@ Os seguintes conceitos de **Ansible** foram apresentados:
 cd playbooks
 ansible-playbook webserver.yml
 ```
+
+# Docker
+
+Os seguintes conceitos foram ensinados:
+
+- docker
+- registry - hub.docker.com
+- Dockerfile
+- docker-compose
